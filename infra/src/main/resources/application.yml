@@ -1,0 +1,32 @@
+server:
+  port: 8082
+
+spring:
+
+  kafka:
+    consumer:
+      bootstrap-servers: localhost:9092
+      group-id: relatorio-group
+      auto-offset-reset: earliest
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+    listener:
+      ack-mode: record
+      poll-timeout: 3000
+    producer:
+      bootstrap-servers: localhost:9092
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+      database: comercio
+      password: rootpass
+      username: rootuser
+      authentication-database: admin
+
+kafka.topic:
+  create-relatorio-consolidado: create_relatorio_consolidado_lancamentos
+  send-relatorio-consolidado: send_relatorio_consolidado_lancamentos

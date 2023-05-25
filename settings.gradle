@@ -1,0 +1,5 @@
+rootProject.name = 'relatorio'
+include 'domain'
+include 'infra'
+include 'usecase'
+
