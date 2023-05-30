@@ -37,6 +37,12 @@ allprojects {
 		implementation 'org.mapstruct:mapstruct:1.5.3.Final'
 		annotationProcessor 'org.mapstruct:mapstruct-processor:1.5.3.Final'
 
+		// AWS
+		implementation 'software.amazon.awssdk:s3:2.20.69'
+
+		// CSV
+		implementation 'com.opencsv:opencsv:5.7.1'
+
 		testImplementation 'org.springframework.boot:spring-boot-starter-test'
 		testImplementation 'org.springframework.kafka:spring-kafka-test'
 	}
